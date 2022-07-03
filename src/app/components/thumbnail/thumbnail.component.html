@@ -1,0 +1,18 @@
+<div class="container-thumbnail">
+    <img src="{{recipe.image}}" class="image">
+    <div class="gradient"></div>
+    <div class="overlay">
+        <a routerLink="recipe" [queryParams]="{id: recipe.internal_id}">
+        <div class="text">Click to view more...</div>
+        </a>
+    </div>
+    <a routerLink="recipe" [queryParams]="{id: recipe.internal_id}">
+      <h3>{{recipe.title}}</h3>
+    </a>
+    <fa-icon class="icon-thumbnail" 
+      [icon]="faHeart" 
+      (click)="onClick()"
+      [ngStyle]="{'stroke': 'crimson', 'color': 'crimson'}"
+      size="lg">
+    </fa-icon>
+</div>

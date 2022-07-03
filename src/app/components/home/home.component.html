@@ -1,0 +1,14 @@
+<app-header (emitter)="setCounter($event)"></app-header>
+<div class="container-home" *ngIf="counter>=1">
+    <div class="check">
+        <input type="checkbox" id="box" (change)="filter($event)" [checked]="isChecked">
+        <label for="box" [ngStyle]="{'margin-left': '1em'}" >Show favourite recipes first</label>
+    </div>
+    <div class="number">Favourite recipes: {{counter}}</div>
+</div>
+<div class="wrapper" >
+    <div *ngFor="let recipe of recipes">
+        <app-thumbnail [recipe]="recipe" (counter)="changeCount($event)" ></app-thumbnail>
+    </div>
+</div>
+

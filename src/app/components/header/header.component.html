@@ -1,0 +1,14 @@
+<div class="container-header">
+    <div class="buttons">
+        <button class="btn" 
+            (click)="filterType('dessert')"  
+            [ngStyle]="{'background-color': dessertColor}">
+        Desserts</button>
+        <button class="btn" 
+            (click)="filterType('drink')"
+            [ngStyle]="{'background-color': drinkColor}">
+        Drinks</button>
+    </div>
+        <input class="search" type="text" placeholder="Search..">
+    
+</div>

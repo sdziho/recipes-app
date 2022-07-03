@@ -1,0 +1,34 @@
+<div class="head">
+    <h1><fa-icon [icon]="faBack" size="lg" class="icon" (click)="returnPrevious()"></fa-icon>{{recipe.title}}</h1>
+</div>
+<div class="container">
+    <div class="left">
+        <img src="{{recipe.image}}" class="pic">
+        <div *ngFor="let type of recipe.dish_type" class="types">
+            <div class="type">{{type}}</div>
+        </div>
+    </div>
+    <div class="right">
+        <div>
+            <div [innerHTML]="recipe.summary" class="description"></div>
+            <label class="italic">
+                <fa-icon [icon]="faSummary" ></fa-icon> 
+                Summary
+            </label>
+        </div>
+        <div class="summary">
+            <div>{{recipe.ready_in_minutes}}</div>
+            <label class="italic">
+                <fa-icon [icon]="faClock"></fa-icon> 
+                Ready in Minutes
+            </label>
+        </div>
+        <div class="summary">
+            <div>{{recipe.servings}}</div>
+            <label class="italic">
+                <fa-icon [icon]="faPeople" ></fa-icon> 
+                Servings
+            </label>
+        </div>
+    </div>
+</div>
