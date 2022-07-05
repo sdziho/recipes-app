@@ -7,7 +7,7 @@
     <div class="number">
         <fa-icon class="icon-thumbnail" 
         [icon]="faHeart" 
-        [ngStyle]="{'stroke': 'crimson', 'color': 'crimson', 'margin-right':'10px'}"
+        [ngStyle]="{'stroke': 'crimson', 'color': 'crimson', 'margin-right':'2px'}"
         size="lg">
         </fa-icon>
         {{counter}} favourite 
@@ -23,7 +23,6 @@
     </p>
 </div>
 <div class="wrapper" >
-    
     <div *ngFor="let recipe of recipes">
         <app-thumbnail [recipe]="recipe" (counter)="changeCount($event)" ></app-thumbnail>
     </div>

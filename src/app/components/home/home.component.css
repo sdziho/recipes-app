@@ -22,7 +22,7 @@
 }
 .check{
     float: left;
-    margin-left: 1em;
+    margin-left: 10px;
     font-size: 16px;
 }
 .number{
@@ -31,7 +31,7 @@
     font-size: 18px;
 }
 .show-fav{
-    margin-left: 1em;
+    margin-left: 10px;
 }
 #box{
     width:13px;

@@ -73,6 +73,7 @@ export class HeaderComponent implements OnInit {
       this.focusSearch="200px";
       this.showButtons=false;
     } 
+    
   }
   collapse(){
     if(this.width<600){
