@@ -85,7 +85,7 @@ export class HeaderComponent implements OnInit {
   onWindowResize() {
     this.width=window.innerWidth;
     if(this.width<600) this.focusSearch="20px";
-    else this.focusSearch="20%";
+    else this.focusSearch="200px";
   }
   
 }
