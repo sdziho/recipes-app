@@ -10,7 +10,7 @@ export class DataService {
   //4aebb5e76edd4de8a04adf44c85138d7
   //ff5ae555c6c44c0a84711df0583d5049
   //9913226b08494665b4a4e555a69b818f
-  private apiKey="ff5ae555c6c44c0a84711df0583d5049";
+  private apiKey="9913226b08494665b4a4e555a69b818f";
   private api="https://api.spoonacular.com/recipes/random?apiKey="+this.apiKey+"&number=10";
   private search_api="https://api.spoonacular.com/recipes/complexSearch?apiKey="+this.apiKey;
   constructor(private http:HttpClient, private types:GlobalService) { 

@@ -18,16 +18,19 @@
             
         </button>
     </div>
+    <form #f="ngForm" (ngSubmit)="collapse()" novalidate>
     <input class="search" 
         type="text" 
         [ngModel]="inputData" 
         placeholder="&#xF002;" 
         (input)="searchData($event)"
         (click)="expand()"
-        (focusout)="collapse()"
+        (blur)="collapse()"
         (touchstart)="expand()"
+        (ngSubmit)="collapse()"
         [ngStyle]="{'width': focusSearch}"
+        name="search"
     >
-    
+    </form>
     
 </div>
