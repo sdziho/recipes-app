@@ -78,7 +78,7 @@ export class HeaderComponent implements OnInit {
   collapse(){
     if(this.width<600){
       setTimeout(()=>{this.focusSearch="20px";},500)
-      setTimeout(()=>{this.showButtons=true;},1000);
+      setTimeout(()=>{this.showButtons=true;},700);
     } 
   }
   @HostListener('window:resize', ['$event'])

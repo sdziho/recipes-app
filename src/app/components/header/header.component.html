@@ -23,8 +23,9 @@
         [ngModel]="inputData" 
         placeholder="&#xF002;" 
         (input)="searchData($event)"
-        (pan)="expand()"
+        (click)="expand()"
         (focusout)="collapse()"
+        (touchstart)="expand()"
         [ngStyle]="{'width': focusSearch}"
     >
     
