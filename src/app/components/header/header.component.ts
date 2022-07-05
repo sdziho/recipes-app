@@ -48,6 +48,10 @@ export class HeaderComponent implements OnInit {
   }
 
   searchData(e:any){
+    if(this.width<600){
+      this.focusSearch="200px";
+      this.showButtons=false;
+    } 
     clearTimeout(this.timer);
     if(e.target.value.length>=3){
       this.timer=setTimeout(()=>{
@@ -72,8 +76,8 @@ export class HeaderComponent implements OnInit {
   }
   collapse(){
     if(this.width<600){
-      this.focusSearch="20px";
-      setTimeout(()=>this.showButtons=true,500);
+      setTimeout(()=>{this.focusSearch="20px";},500)
+      setTimeout(()=>{this.showButtons=true;},1000);
     } 
   }
   @HostListener('window:resize', ['$event'])

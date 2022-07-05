@@ -1,5 +1,5 @@
 <div class="container-header">
-    <div class="buttons" *ngIf="showButtons">
+    <div class="buttons" *ngIf="showButtons||width>600">
         <button class="btn" 
             (click)="filterType('dessert')"  
             [ngStyle]="{'background-color': dessertColor}">
@@ -11,7 +11,7 @@
         <button class="btn" 
             (click)="filterType('drink')"
             [ngStyle]="{'background-color': drinkColor}">
-            <fa-icon class="icon-thumbnail" 
+            <fa-icon class="icon-thumbnail"
             [icon]="faTag">
             </fa-icon>
             Drinks
@@ -23,7 +23,7 @@
         [ngModel]="inputData" 
         placeholder="&#xF002;" 
         (input)="searchData($event)"
-        (focus)="expand()"
+        (click)="expand()"
         (focusout)="collapse()"
         [ngStyle]="{'width': focusSearch}"
     >
