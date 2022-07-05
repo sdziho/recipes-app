@@ -26,7 +26,7 @@
         (input)="searchData($event)"
         (click)="expand()"
         (blur)="collapse()"
-        (touchstart)="expand()"
+        (touchend)="expand()"
         (ngSubmit)="collapse()"
         [ngStyle]="{'width': focusSearch}"
         name="search"
