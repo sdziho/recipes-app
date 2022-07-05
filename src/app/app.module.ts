@@ -9,6 +9,7 @@ import { ThumbnailComponent } from './components/thumbnail/thumbnail.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { DetailsComponent } from './components/details/details.component';
 import { RouterModule, Routes } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
@@ -28,7 +29,8 @@ const routes: Routes = [
     AppRoutingModule,
     HttpClientModule,
     FontAwesomeModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    FormsModule
 
   ],
   providers: [],

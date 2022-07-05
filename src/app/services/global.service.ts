@@ -1,12 +1,14 @@
 import { Injectable } from '@angular/core';
-
+import { Subject } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
 export class GlobalService {
   private checked:string="";
   private checkbox:boolean=false;
+  private input:string="";
   constructor() { }
+
   getChecked():string{
     return this.checked;
   }
@@ -19,4 +21,11 @@ export class GlobalService {
   setCheckbox(data:boolean):void{
     this.checkbox=data;
   }
+  getInputData():string{
+    return this.input;
+  }
+  setInputData(data:string):void{
+    this.input=data;
+  }
+
 }

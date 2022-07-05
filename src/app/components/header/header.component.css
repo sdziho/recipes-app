@@ -1,3 +1,4 @@
+@import "//netdna.bootstrapcdn.com/font-awesome/3.0/css/font-awesome.css";
 .container-header{
     max-width: 70rem;
     margin: auto auto;
@@ -11,30 +12,42 @@
     background-color: crimson; 
     margin-top: 1em;
     margin-left: 1em;
-    border: none;
+    border: 1px solid crimson;
     color: white;
-    padding: 0.5em 2em;
+    padding: 0.5em 1em;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    border-radius: 1em;
+    border-radius: 0.8em;
     cursor: pointer;
+    
 }
 .btn:hover{
-    background-color: #C60117;
+    color:#ccc;
 }
 .search-container{
    
     float:right;
 }
 .search{
-    padding: 6px;
+    padding: 10px;
     max-width: 30rem;
     float:right;
     margin-top: 1em;
-    margin-right: 2em;
+    margin-right: 1em;
     font-size: 17px;
     border: 1px solid #ccc;
     border-radius: 1em;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    width: 20px;
+    font-family: 'Helvetica', 'FontAwesome', sans-serif;
+}
+.search-icon{
+    float:right;
+    margin-top: 1em;
+    margin-right: 2em;
+    color: white;
+    padding: 0.5em;
 }

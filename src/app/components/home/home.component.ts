@@ -3,7 +3,7 @@ import { Subscription } from 'rxjs';
 import { Recipe } from 'src/app/Recipe';
 import { GlobalService } from 'src/app/services/global.service';
 import { RecipeService } from 'src/app/services/recipe.service';
-
+import { faHeart} from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -14,6 +14,7 @@ export class HomeComponent implements OnInit {
   counter:number=0;
   isChecked:boolean=false;
   sub:Subscription=new Subscription;
+  faHeart=faHeart;
 
   constructor(
     private msg: RecipeService, 
@@ -27,6 +28,11 @@ export class HomeComponent implements OnInit {
     }
     this.isChecked=this.choice.getCheckbox();
     if(this.isChecked) this.sortRecipes();
+    
+     
+  }
+  ngOnChange():void{
+    console.log(this.recipes)
   }
   filter(e:any){
     if(e.target.checked) this.sortRecipes();

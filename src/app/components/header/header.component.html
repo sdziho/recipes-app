@@ -1,14 +1,32 @@
 <div class="container-header">
-    <div class="buttons">
+    <div class="buttons" *ngIf="showButtons">
         <button class="btn" 
             (click)="filterType('dessert')"  
             [ngStyle]="{'background-color': dessertColor}">
-        Desserts</button>
+            <fa-icon class="icon-thumbnail" 
+            [icon]="faTag">
+            </fa-icon>
+            Desserts
+        </button>
         <button class="btn" 
             (click)="filterType('drink')"
             [ngStyle]="{'background-color': drinkColor}">
-        Drinks</button>
+            <fa-icon class="icon-thumbnail" 
+            [icon]="faTag">
+            </fa-icon>
+            Drinks
+            
+        </button>
     </div>
-        <input class="search" type="text" placeholder="Search..">
+    <input class="search" 
+        type="text" 
+        [ngModel]="inputData" 
+        placeholder="&#xF002;" 
+        (input)="searchData($event)"
+        (focus)="expand()"
+        (focusout)="collapse()"
+        [ngStyle]="{'width': focusSearch}"
+    >
+    
     
 </div>

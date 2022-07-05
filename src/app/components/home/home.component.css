@@ -7,21 +7,88 @@
     grid-auto-rows: minmax(200px,auto);
     
 }
+.line{
+    max-width: 70rem;
+    margin: 1rem auto;
+    border-top: 1px solid crimson;
+    
+}
 .container-home{
     max-width: 70rem;
-    margin: 1em auto;
+    margin: 1rem auto;
     overflow: hidden;
     color: whitesmoke;
+    
 }
 .check{
     float: left;
     margin-left: 1em;
+    font-size: 18px;
 }
 .number{
     float: right;
-    margin-right: 2em;
+    margin-right: 1em;
+    font-size: 18px;
+}
+.show-fav{
+    margin-left: 1em;
 }
 #box{
-    width:1.2em;
-    height:1.2em;
+    width:13px;
+    height:13px;
+}
+.loader {
+    margin: auto auto;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid crimson;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite; 
+    animation: spin 2s linear infinite;
+  }
+
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg);}
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg);}
+  }
+  
+
+.hide{
+    animation: hideAnimation 0s ease-in 5s;
+    animation-fill-mode: forwards;
+}
+  
+@keyframes hideAnimation {
+    to {
+        visibility: hidden;
+        width: 0;
+        height: 0;
+    }
+}
+
+.not-found{
+    color: white;
+    font-size: 26px;
+    text-justify: auto;
+    text-align: center;
+    animation: showAnimation 0s ease-in 5s;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+}
+@keyframes showAnimation {
+    to {
+        visibility:visible;
+    }
+}
+
+.spinner{
+    max-width: 70rem;
+    margin: auto auto;
+    text-align: center;
 }
